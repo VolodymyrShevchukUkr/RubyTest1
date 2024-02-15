@@ -1,28 +1,69 @@
-# frozen_string_literal: true
+PATH
+  remote: .
+  specs:
+    chamber (3.0.1)
+      thor (>= 0.20.3, < 2.0)
 
-source("https://rubygems.org")
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.2.11.1)
+      activesupport (= 4.2.11.1)
+      builder (~> 3.1)
+    activerecord (4.2.11.1)
+      activemodel (= 4.2.11.1)
+      activesupport (= 4.2.11.1)
+      arel (~> 6.0)
+    activesupport (4.2.11.1)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    arel (6.0.4)
+    awesome_print (1.9.2)
+    builder (3.2.4)
+    concurrent-ruby (1.2.2)
+    diff-lcs (1.5.0)
+    fuubar (2.3.2)
+      rspec-core (~> 3.0)
+      ruby-progressbar (~> 1.4)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    minitest (5.11.3)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.1)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.0)
+    rspectacular (0.70.8)
+      fuubar (~> 2.0)
+      rspec (~> 3.1)
+    ruby-progressbar (1.13.0)
+    thor (1.2.1)
+    thread_safe (0.3.6)
+    timecop (0.9.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
 
-gemspec
+PLATFORMS
+  ruby
 
-# Specify the same dependency sources as the application Gemfile
+DEPENDENCIES
+  activerecord (~> 4.0)
+  activesupport (~> 4.0)
+  awesome_print (~> 1.6)
+  chamber!
+  rspec (~> 3.5)
+  rspectacular (~> 0.46)
+  timecop (~> 0.0)
 
-gem("activejob")
-gem("constant_resolver", require: false)
-gem("rubocop-performance", require: false)
-gem("rubocop-sorbet", require: false)
-gem("mocha", require: false)
-gem("rubocop-shopify", require: false)
-gem("tapioca", require: false)
-
-group :development do
-  gem("byebug", require: false)
-  gem("minitest-focus", require: false)
-  gem("activejob", "~> 6.0")
-
-
-  gem("m")
-  gem("rake")
-  gem("sorbet-static-and-runtime")
-  gem("zeitwerk")
-end
+BUNDLED WITH
+   2.3.24
